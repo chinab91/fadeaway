@@ -1,8 +1,10 @@
 body {
 	color: white;
 	min-height: 570px;
+	width: 960px;
+	margin: 0 auto;
 	position: relative;
-	background-color :   #0F0107;
+	background-color: #0F0107;
 }
 
 h1 {
@@ -16,14 +18,49 @@ p {
 
 .wrapper {
 	min-height: 570px;
-	height: auto !important;
-	height: 100%;
-	/* the bottom margin is the negative value of the footer's height */
+	min-width:300px;
 }
 
 .footer {
-	height: 20px
-	position: absolute;
+	height: 20px ;
+	width: 100%;
+	position : absolute;
 	text-align: center;
-	bottom:0px
 }
+
+.box_frame {
+	height: 220px;
+	width: 220px;
+}
+
+.box_frame#pos1 {
+	position: relative;
+	float: left;
+}
+
+.box_frame#pos2 {
+	position: relative;
+	float: left;
+}
+
+.box_frame#pos3 {
+	position: relative;
+	float: left;
+}
+
+.box_frame#pos4 {
+	position: relative;
+	float: left;
+}
+
+.box_frame#pos5 {
+	position: relative;
+}
+
+.boxContent {
+	width: inherit;
+	height: inherit;
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+	}
