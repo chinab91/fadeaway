@@ -1,14 +1,29 @@
-body
-{
-color:white;
-background-color:#120208;
+body {
+	color: white;
+	min-height: 570px;
+	position: relative;
+	background-color :   #0F0107;
 }
-h1
-{
-text-align:left;
+
+h1 {
+	text-align: left;
 }
-p
-{
-font-family:"Times New Roman";
-font-size:20px;
+
+p {
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+.wrapper {
+	min-height: 570px;
+	height: auto !important;
+	height: 100%;
+	/* the bottom margin is the negative value of the footer's height */
+}
+
+.footer {
+	height: 20px
+	position: absolute;
+	text-align: center;
+	bottom:0px
 }

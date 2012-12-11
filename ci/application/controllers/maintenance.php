@@ -9,7 +9,7 @@ class Maintenance extends CI_Controller {
 			show_404();
 		}
 
-		$data['title'] = ucfirst('Unavailable is _______'); // Capitalize the first letter
+		$data['title'] = ucfirst('maintenance is _______'); // Capitalize the first letter
 
 		$this->load->view('templates/header', $data);
 		$this->load->view($page, $data);
