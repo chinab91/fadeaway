@@ -38,7 +38,8 @@
 |
 */
 $route['register']='register/view';
-$route['default_controller'] = 'pages/view';
+$route['default_controller'] = 'maintenance/view';
+//$route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
 
