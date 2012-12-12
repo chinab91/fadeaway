@@ -55,6 +55,7 @@ p {
 
 .box_frame#pos5 {
 	position: relative;
+	clear:both;
 }
 
 .boxContent {

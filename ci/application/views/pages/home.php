@@ -11,11 +11,11 @@ $defaultHome = array(
 <div class = "wrapper">
 <h1><?php echo $defaultHome['topic']?> is _______</h1>
 
-<div class = "box_frame" id = "pos1"><div class ="boxContent">
+<div class = "box_frame" id = "pos1" style="background-color:rgb(15,99,30);"><div class ="boxContent" id = "boxContent1">
 <b><?php echo $defaultHome['box1']?></b>
 </div></div>
 
-<div class = "box_frame" id = "pos2"><div class ="boxContent">
+<div class = "box_frame" id = "pos2"><div class ="boxContent" id = "boxContent1">
 <b><?php echo $defaultHome['box2']?></b>
 </div></div>
 
