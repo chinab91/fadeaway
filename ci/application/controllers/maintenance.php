@@ -11,8 +11,7 @@ class Maintenance extends CI_Controller {
 
 		$data['title'] = ucfirst('maintenance is _______'); // Capitalize the first letter
 
-		$this->load->view('templates/header', $data);
 		$this->load->view($page, $data);
-		$this->load->view('templates/footer', $data);
+
 	}
 }

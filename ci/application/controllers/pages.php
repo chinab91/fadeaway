@@ -10,8 +10,9 @@ class Pages extends CI_Controller {
 		}
 
 		$data['title'] = ucfirst('Fill this _____'); // Capitalize the first letter
-
-		$this->load->view('templates/header', $data);
+                
+		//load pages
+                $this->load->view('templates/header', $data);
 		$this->load->view('pages/'.$page, $data);
 		$this->load->view('templates/footer', $data);
 	}
