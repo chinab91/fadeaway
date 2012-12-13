@@ -4,11 +4,7 @@ $(document).ready(function(){
 			var randomR=Math.floor(Math.random()*255)
 			var randomG=Math.floor(Math.random()*255)
 			var randomB=Math.floor(Math.random()*255)
-			var randomFontR=Math.floor(Math.random()*255)
-			var randomFontG=Math.floor(Math.random()*255)
-			var randomFontB=Math.floor(Math.random()*255)
 			$(this).css('background-color', 'rgb('+randomR+','+randomG+','+randomB+')');
-			$(this).css('color', 'rgb('+randomFontR+','+randomFontG+','+randomFontB+')');
 			$(this).fadeIn(1000);
 		});
 	});
