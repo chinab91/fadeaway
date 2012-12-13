@@ -11,6 +11,6 @@ class Topic_Model extends CI_Model{
             return $query->result_array();
         }
         $query = $this->db->get_where('topics',array('topic'=>$topic));
-        return $query->result_array();
+        return $query->row_array();
     }
 }
