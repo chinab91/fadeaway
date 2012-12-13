@@ -7,13 +7,14 @@ body {
 	background-color: #0F0107;
 }
 
-h1 {
-	text-align: left;
-}
 
 p {
 	font-family: "Times New Roman";
 	font-size: 20px;
+}
+
+.topic {
+	margin-left:10px
 }
 
 .wrapper {
@@ -24,44 +25,42 @@ p {
 .footer {
 	height: 20px ;
 	width: 100%;
-	position : absolute;
+	/*position : absolute;*/
 	text-align: center;
 }
 
 .box_frame {
 	height: 220px;
 	width: 220px;
-}
-
-.box_frame#pos1 {
-	position: relative;
-	float: left;
-}
-
-.box_frame#pos2 {
-	position: relative;
-	float: left;
-}
-
-.box_frame#pos3 {
-	position: relative;
-	float: left;
-}
-
-.box_frame#pos4 {
-	position: relative;
-	float: left;
-}
-
-.box_frame#pos5 {
-	position: relative;
-	clear:both;
+	margin: 10px 10px;
 }
 
 .boxContent {
 	width: inherit;
 	height: inherit;
 	display:table-cell;
+	font-size:25px;
 	text-align: center;
 	vertical-align: middle;
 	}
+
+.box_frame#pos1,
+.box_frame#pos2,
+.box_frame#pos3,
+.box_frame#pos4,
+.box_frame#pos6,
+.box_frame#pos7,
+.box_frame#pos8,
+.box_frame#pos10,
+.box_frame#pos11,
+.box_frame#pos12 {
+	position: relative;
+	float: left;
+}
+
+.box_frame#pos5,.box_frame#pos9  {
+	position: relative;
+	float: left;
+	clear:left;
+}
+
