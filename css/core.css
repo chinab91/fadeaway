@@ -35,7 +35,7 @@ p {
 	margin: 10px 10px;
 }
 
-.boxContent {
+.box_content {
 	width: inherit;
 	height: inherit;
 	display:table-cell;
@@ -43,22 +43,21 @@ p {
 	text-align: center;
 	vertical-align: middle;
 	}
-
+.box_frame#pos0,
 .box_frame#pos1,
 .box_frame#pos2,
 .box_frame#pos3,
-.box_frame#pos4,
+.box_frame#pos5,
 .box_frame#pos6,
 .box_frame#pos7,
-.box_frame#pos8,
+.box_frame#pos9,
 .box_frame#pos10,
-.box_frame#pos11,
-.box_frame#pos12 {
+.box_frame#pos11 {
 	position: relative;
 	float: left;
 }
 
-.box_frame#pos5,.box_frame#pos9  {
+.box_frame#pos4,.box_frame#pos8  {
 	position: relative;
 	float: left;
 	clear:left;
