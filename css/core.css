@@ -1,48 +1,53 @@
 body {
-	color: white;
-	min-height: 570px;
-	width: 960px;
-	margin: 0 auto;
-	position: relative;
-	background-color: #0F0107;
+    color: white;
+    min-height: 570px;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #0F0107;
 }
 
 
 p {
-	font-family: "Times New Roman";
-	font-size: 20px;
+    font-family: "Times New Roman";
+    font-size: 20px;
 }
 
 .topic {
-	margin-left:10px
+    margin-left:10px;
 }
 
 .wrapper {
-	min-height: 570px;
-	min-width:300px;
+    min-height: 570px;
+    min-width:300px;
 }
 
 .footer {
-	height: 20px ;
-	width: 100%;
-	/*position : absolute;*/
-	text-align: center;
+    height: 20px ;
+    width: inherit;
+    float: left;
+    /*position : absolute;*/
+    text-align: center;
 }
 
 .box_frame {
-	height: 220px;
-	width: 220px;
-	margin: 10px 10px;
+    height: 200px;
+    width: 200px;
+    border:5px solid transparent;
+    margin: 5px 5px;
+}
+.box_frame:hover {
+    border-color: #2E78E6;
+}
+.box_content {
+    width: inherit;
+    height: inherit;
+    display:table-cell;
+    font-size:25px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.box_content {
-	width: inherit;
-	height: inherit;
-	display:table-cell;
-	font-size:25px;
-	text-align: center;
-	vertical-align: middle;
-	}
 .box_frame#pos0,
 .box_frame#pos1,
 .box_frame#pos2,
@@ -53,13 +58,13 @@ p {
 .box_frame#pos9,
 .box_frame#pos10,
 .box_frame#pos11 {
-	position: relative;
-	float: left;
+    position: relative;
+    float: left;
 }
 
 .box_frame#pos4,.box_frame#pos8  {
-	position: relative;
-	float: left;
-	clear:left;
+    position: relative;
+    float: left;
+    clear:left;
 }
 

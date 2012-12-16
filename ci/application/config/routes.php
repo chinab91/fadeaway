@@ -38,6 +38,7 @@
 |
 */
 $route['register']='register/view';
+$route['request']='request/get';
 $route['default_controller'] = 'maintenance/view';
 //$route['default_controller'] = 'pages/view';
 //$route['(:any)'] = 'pages/view/$1';

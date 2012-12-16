@@ -6,7 +6,7 @@ class Entry_Model extends CI_Model{
     
     public function get_entries($topic_id = FALSE){
         if($topic_id === FALSE){
-            $query = $this->db->get('entries');
+            $query = $this->db->get('entries',11,0);
             return $query->result_array();
         }
         $query = $this->db->get_where('entries',array('topic_id'=>$topic_id));
