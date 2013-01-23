@@ -12,6 +12,9 @@
 <div class = "wrapper">
 <div class = "topic"><h1><?php echo $title; ?></h1></div>
 
+<div class = "box_frame" id = "pos0"><div class ="boxContent">
+</div></div>
+
 <div class = "box_frame" id = "pos1"><div class ="boxContent">
 </div></div>
 
@@ -43,9 +46,6 @@
 </div></div>
 
 <div class = "box_frame" id = "pos11"><div class ="boxContent">
-</div></div>
-
-<div class = "box_frame" id = "pos12"><div class ="boxContent">
 </div></div>
 
 </div>

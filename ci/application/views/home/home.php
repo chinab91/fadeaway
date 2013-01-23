@@ -2,7 +2,7 @@
 <div class = "wrapper">
 <div class = "topic"><h1><?php echo $topic['topic']?> _______</h1></div>
 
-<div class = "box_frame" id = "pos0"><div class ="box_content" id = "boxContent1">
+<div class = "box_frame" id = "pos0"><div class ="box_content" id = "boxContent0">
 <b>Fill this</b>
 </div></div>
 
@@ -25,7 +25,7 @@ $counter++;
 for($unfilled_box = $counter;$unfilled_box <= 11; $unfilled_box++){
 echo "<div class = 'box_frame' id = 'pos$unfilled_box'>\n"; 
 echo "<div class =\"box_blank\">\n";//div box_content
-echo "</div></div>\n";
+echo "</div></div>\n"; 
 }
 
 ?>

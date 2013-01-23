@@ -21,7 +21,6 @@ function receivedData()
             var err = "Error: " + e.description;
             alert(err);
         }
-        alert(JsonObj.content);
         if(JsonObj !== null){
             
                 $(".box_content").text(JsonObj.content);
