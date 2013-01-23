@@ -17,14 +17,14 @@ $char_color = "color:rgb(".
         $entry['font_R'].",".$entry['font_G'].",".$entry['font_B']
         .");\">";//end style //end start div box_frame
 echo $style.$char_color;
-echo "<div class =\"box_content\">\n";//div box_content
+echo "<div class =\"box_content\" id = \"boxContent$counter\">\n";//div box_content
 echo "<b>".$entry['content']."</b>\n";
 echo "</div></div>\n";
 $counter++;
 }      
 for($unfilled_box = $counter;$unfilled_box <= 11; $unfilled_box++){
 echo "<div class = 'box_frame' id = 'pos$unfilled_box'>\n"; 
-echo "<div class =\"box_blank\">\n";//div box_content
+echo "<div class =\"box_content\" id = \"boxContent$counter\">\n";//div box_content
 echo "</div></div>\n"; 
 }
 
