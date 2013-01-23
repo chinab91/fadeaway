@@ -23,7 +23,7 @@ function receivedData()
         }
         if(JsonObj !== null){
             
-                $(".box_content").text(JsonObj.content);
+                $("#boxContent4").text(JsonObj.content);
             
         }
     }

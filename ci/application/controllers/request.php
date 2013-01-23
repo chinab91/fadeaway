@@ -5,6 +5,6 @@ class Request extends CI_Controller {
         $json['content'] = "json test";
         
         $encoded = json_encode($json);
-        die($encoded);
+        echo $encoded;
     }
 }
