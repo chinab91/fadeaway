@@ -5,9 +5,8 @@ class Request extends CI_Controller {
         $this->load->model('Entry_model');
     }
     public function get(){
-        $topic_id = $this->input->post('id');
-        //$json['content'] = $this->entry_model->get_entries($topic_id);
-        $json['content'] = "testing post";
+        $topic_id = $this->input->post('topic_id');
+        $json = $this->Entry_model->get_entries($topic_id);
         $encoded = json_encode($json);
         echo $encoded;
     }

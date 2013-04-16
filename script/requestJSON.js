@@ -3,10 +3,10 @@ $(document).ready(setInterval(function() {
     if (request) {
         request.abort();
     }
-    
-    var data = {topic_id : 0};
+
+    var data = {topic_id: 0};
     JSON.stringify(data);
-    
+
     var request = $.ajax({
         type: "POST",
         url: "/index.php/request",
@@ -22,13 +22,13 @@ $(document).ready(setInterval(function() {
 function receivedData(data)
 {
     // if request object received response
-        // parser.php response
+    // parser.php response
 
-        var random12 = 1 + Math.floor(Math.random() * 12);
-        if (data.content !== null) {
-            fadeInOut($("#boxContent" + random12), data.content);
-            //$("#boxContent" + random12).text(JsonObj.content);
+    var random12 = 1 + Math.floor(Math.random() * 12);
+    if (data !== null) {
+        fadeInOut($("#boxContent" + random12), data['0']['content']);
+        //$("#boxContent" + random12).text(JsonObj.content);
 
-        }
+    }
 
 }
