@@ -40,7 +40,10 @@
 $route['home']='home/index';
 $route['register']='register/view';
 $route['request']='request/get';
-$route['default_controller'] = 'maintenance/view';
+
+//$route['default_controller'] = 'maintenance/view';
+$route['default_controller'] = 'home/index';
+
 //$route['default_controller'] = 'pages/view';
 //$route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';

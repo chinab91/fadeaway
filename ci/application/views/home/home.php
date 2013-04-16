@@ -26,6 +26,7 @@ for($unfilled_box = $counter;$unfilled_box <= 11; $unfilled_box++){
 echo "<div class = 'box_frame' id = 'pos$unfilled_box'>\n"; 
 echo "<div class =\"box_content\" id = \"boxContent$counter\">\n";//div box_content
 echo "</div></div>\n"; 
+$counter++;
 }
 
 ?>

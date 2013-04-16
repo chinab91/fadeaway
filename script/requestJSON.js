@@ -1,30 +1,34 @@
-$(document).ready(function() {
-    request = new XMLHttpRequest();
+var request;
+$(document).ready(setInterval(function() {
+    if (request) {
+        request.abort();
+    }
+    
+    var data = {topic_id : 0};
+    JSON.stringify(data);
+    
+    var request = $.ajax({
+        type: "POST",
+        url: "/index.php/request",
+        data: data,
+        success: function(data) {
+            receivedData(data);
+        },
+        dataType: 'json'
+    });
 
-    request.open("GET", "/index.php/request", true);
-    request.onreadystatechange = receivedData;
-    request.send(null);
-});
+}, 4000));
 
-function receivedData()
+function receivedData(data)
 {
     // if request object received response
-    if (request.readyState === 4)
-    {
         // parser.php response
-            
-        var Jsontext = request.responseText;
-        var JsonObj = null;
-        try {
-            JsonObj = jQuery.parseJSON(Jsontext);
-        } catch (e) {
-            var err = "Error: " + e.description;
-            alert(err);
+
+        var random12 = 1 + Math.floor(Math.random() * 12);
+        if (data.content !== null) {
+            fadeInOut($("#boxContent" + random12), data.content);
+            //$("#boxContent" + random12).text(JsonObj.content);
+
         }
-        if(JsonObj !== null){
-            
-                $("#boxContent4").text(JsonObj.content);
-            
-        }
-    }
+
 }
