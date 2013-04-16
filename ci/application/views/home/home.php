@@ -1,6 +1,20 @@
 <script type="text/javascript" src="/script/requestJSON.js"></script>
+<script type="text/javascript">
+<?php 
+    $js_topic_id = json_encode($topic['topic_id']);
+    echo "var topic_id = ".$js_topic_id.";\n";
+    $js_entries_id = array();
+    $counter = 0;
+    foreach($entries as $entry){
+        $js_entries_id["$counter"] = $entry['entry_id'];
+        $counter++;
+    }
+    $js_entries_id = json_encode($js_entries_id);
+    echo "var entries_id = ".$js_entries_id.";\n";
+?>
+</script>
 <div class = "wrapper">
-<div class = "topic"><h1><?php echo $topic['topic']?> _______</h1></div>
+<div class = "topic"><h1><?php echo $topic['topic'];?> _______</h1></div>
 
 <div class = "box_frame" id = "pos0"><div class ="box_content" id = "boxContent0">
 <b>Fill this</b>

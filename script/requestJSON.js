@@ -4,7 +4,8 @@ $(document).ready(setInterval(function() {
         request.abort();
     }
 
-    var data = {topic_id: 0};
+    var data={};
+    data['topic_id'] = topic_id ;
     JSON.stringify(data);
 
     var request = $.ajax({
@@ -16,7 +17,6 @@ $(document).ready(setInterval(function() {
         },
         dataType: 'json'
     });
-
 }, 4000));
 
 function receivedData(data)
