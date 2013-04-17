@@ -2,7 +2,6 @@
 
 class Topic extends CI_Controller {
 
-    
     public function __construct() {
         parent::__construct();
         $this->load->model('Entry_model');
@@ -14,7 +13,7 @@ class Topic extends CI_Controller {
         $data['entries'] = $this->Entry_model->get_entries($data['topic']['topic_id']);
         $data['title'] = $data['topic']['topic'];
 
-        
+
         $this->load->view('templates/header', $data);
         $this->load->view('topic/view', $data);
         $this->load->view('templates/footer');
@@ -31,6 +30,26 @@ class Topic extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('topic/view', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function fills() {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $data['title'] = 'Create new fills';
+
+        $this->form_validation->set_rules('text', 'text', 'required');
+
+        if ($this->form_validation->run() === FALSE) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('topic/fills', $data);
+            $this->load->view('templates/footer');
+        }else{
+            $this->Entry_model->set_entry();
+            $this->load->view('templates/header', $data);
+            $this->load->view('topic/fills_success');
+            $this->load->view('templates/footer');
+        }
     }
 
 }

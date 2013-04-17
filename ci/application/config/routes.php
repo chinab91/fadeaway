@@ -42,6 +42,7 @@ $route['register']='register/view';
 $route['request']='request/get';
 
 //$route['default_controller'] = 'maintenance/view';
+$route['fills'] = 'topic/fills';
 $route['default_controller'] = 'topic/home';
 
 //$route['default_controller'] = 'pages/view';

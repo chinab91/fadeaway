@@ -26,4 +26,14 @@ class Entry_model extends CI_Model{
         //$query = $this->db->where_not_in('entry_id',$entries_id);
         return $query->result_array();
     }
+    
+    public function set_entry(){
+        $data = array(
+            'content'=>  $this->input->post('text'),
+            'user_id' => 0,
+            'topic_id' =>0
+        );
+        return $this->db->insert('entries',$data);
+        
+    }
 }
