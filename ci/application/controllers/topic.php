@@ -9,6 +9,12 @@ class Topic extends CI_Controller {
     }
 
     public function home() {
+        $data['username'] = NULL;
+        if($this->session->userdata('logged_in')){
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+        }
+        
         $data['topic'] = $this->Topic_model->get_topics(0);
         $data['entries'] = $this->Entry_model->get_entries($data['topic']['topic_id']);
         $data['title'] = $data['topic']['topic'];

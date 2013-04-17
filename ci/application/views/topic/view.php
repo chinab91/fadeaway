@@ -15,7 +15,7 @@
 </script>
 <div class = "wrapper">
 <div class = "topic"><h1><?php echo $topic['topic'];?> _______</h1></div>
-
+<div class = "user"><h1><?php if($username){echo 'welcome '.$username.anchor("login/logout",'Click to Logout');}?> </h1></div>
 <div class = "box_frame" id = "pos0"><div class ="box_content" id = "boxContent0">
 <b>Fill this</b>
 </div></div>
