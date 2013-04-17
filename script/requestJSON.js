@@ -25,10 +25,10 @@ function receivedData(data)
     // if request object received response
     // parser.php response
 
-    var random12 = 1 + Math.floor(Math.random() * 12);
+    var random12 = 1 + Math.floor(Math.random() * 11);
     if (data !== null) {
         fadeInOut($("#boxContent" + random12), data['content']);
-        entries_id[random12] = data['entry_id'];
+        entries_id[random12-1] = data['entry_id'];
         //$("#boxContent" + random12).text(JsonObj.content);
 
     }
