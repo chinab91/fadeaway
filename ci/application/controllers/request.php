@@ -8,8 +8,9 @@ class Request extends CI_Controller {
         $topic_id = $this->input->post('topic_id');
         $entries_id = $this->input->post('entries_id');
         $json = $this->Entry_model->get_entries_not_in($topic_id,$entries_id);
-        $min = 0;
-        $encoded = json_encode($json[rand($min, count($json))]);
+        $rand_min = 0;
+        $rand_max = count($json)-1;
+        $encoded = json_encode($json[rand($rand_min,$rand_max )]);
         echo $encoded;
     }
 }
