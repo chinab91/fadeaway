@@ -6,6 +6,7 @@ $(document).ready(setInterval(function() {
 
     var data={};
     data['topic_id'] = topic_id ;
+    data['entries_id'] = entries_id;
     JSON.stringify(data);
 
     var request = $.ajax({
@@ -26,7 +27,8 @@ function receivedData(data)
 
     var random12 = 1 + Math.floor(Math.random() * 12);
     if (data !== null) {
-        fadeInOut($("#boxContent" + random12), data['0']['content']);
+        fadeInOut($("#boxContent" + random12), data['content']);
+        entries_id[random12] = data['entry_id'];
         //$("#boxContent" + random12).text(JsonObj.content);
 
     }
