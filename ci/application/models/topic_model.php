@@ -10,7 +10,7 @@ class Topic_model extends CI_Model{
             $query = $this->db->get('topics');
             return $query->result_array();
         }
-        $query = $this->db->get_where('topics',array('topic'=>$topic));
+        $query = $this->db->get_where('topics',array('topic_id'=>$topic));
         return $query->row_array();
     }
 }
