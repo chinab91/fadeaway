@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/script/boxEffect.js"></script>
 <script type="text/javascript" src="/script/requestJSON.js"></script>
 <script type="text/javascript">
 <?php 
@@ -70,7 +71,7 @@
 </div>
 
 <div class = "wrapper">
-<div class = "topic"><h1><?php echo $topic['topic'];?> _______</h1></div>
+<div class = "topic"><h1><?php echo $topic;?> _______</h1></div>
 
 
 
@@ -81,7 +82,7 @@
     <?php if($username){echo 'welcome '.$username."<br>".anchor("login/logout",'Click to Logout');}?> 
 </div>
 
-<div class = "box_frame" id = "pos0" onclick="location.href='<?php echo site_url("topic/fills");?>'" style =" cursor: pointer;"><div class ="box_content" id = "boxContent0">
+<div class = "box_frame" id = "pos0" onclick="location.href='<?php echo site_url("topic/fills/$topic_id");?>'" style =" cursor: pointer;"><div class ="box_content" id = "boxContent0">
 <b>Fill this</b>
 </div></div>
 

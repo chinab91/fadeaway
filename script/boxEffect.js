@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $(".box_content").each(function(){
+    $(this).css('marginTop','-'+$(this).height()/2 + 'px');
+    });
     $(".box_frame").hover(function() {
         hover_fadeInOut($(this));
     });

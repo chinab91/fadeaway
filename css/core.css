@@ -89,9 +89,15 @@ p {
     border-color: #2E78E6;
 }
 .box_content {
-    width: inherit;
-    height: inherit;
-    display:table-cell;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+/*    width: inherit;
+    height: inherit;*/
+    display: block;
+/*    overflow: hidden;*/
+    word-wrap: break-word;
+    overflow: hidden;
     font-size:25px;
     text-align: center;
     vertical-align: middle;

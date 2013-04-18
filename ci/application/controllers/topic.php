@@ -11,14 +11,16 @@ class Topic extends CI_Controller {
 
     public function home() {
         $data['username'] = NULL;
-        if($this->session->userdata('logged_in')){
+        if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
         }
-        
-        $data['topic'] = $this->Topic_model->get_topics(0);
-        $data['entries'] = $this->Entry_model->get_entries($data['topic']['topic_id']);
-        $data['title'] = $data['topic']['topic'];
+
+        $topic_array = $this->Topic_model->get_topics(0);
+        $data['entries'] = $this->Entry_model->get_entries($topic_array['topic_id']);
+        $data['title'] = $topic_array['topic'];
+        $data['topic'] = $topic_array['topic'];
+        $data['topic_id'] = $topic_array['topic_id'];
 
 
         $this->load->view('templates/header', $data);
@@ -26,33 +28,32 @@ class Topic extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function view($prima_key) {
-        $data['entries_item'] = $this->Entry_model->get_entries($prima_key);
+    public function fills($topic_id) {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
 
-        if (empty($data['news_item'])) {
-            show_404();
-        }
-        $data['title'] = $data['news_item']['title'];
-
+        $topic_array = $this->Topic_model->get_topics($topic_id);
+        $data['topic'] = $topic_array['topic'];
+        $data['topic_id'] = $topic_array['topic_id'];
+        $data['title'] = 'Create new fills';
         $this->load->view('templates/header', $data);
-        $this->load->view('topic/view', $data);
+        $this->load->view('topic/fills', $data);
         $this->load->view('templates/footer');
     }
 
-    public function fills() {
+    public function fill_add() {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
         $data['title'] = 'Create new fills';
 
-        $this->form_validation->set_rules('text', 'text', 'trim|required|min_length[1]|max_length[50]|xss_clean');
+        $this->form_validation->set_rules('text', 'text', 'trim|required|min_length[1]|max_length[70]|xss_clean');
 
         if ($this->form_validation->run() === FALSE) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('topic/fills', $data);
-            $this->load->view('templates/footer');
-        }else{
-            $this->Entry_model->set_entry();
+            $topic_id = $this->input->post('topic_id');
+            $this->fills($topic_id);
+        } else {
+            $this->Entry_model->add_entry();
             $this->load->view('templates/header', $data);
             $this->load->view('topic/fills_success');
             $this->load->view('templates/footer');
