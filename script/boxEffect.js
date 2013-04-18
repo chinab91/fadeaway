@@ -2,6 +2,11 @@ $(document).ready(function() {
     $(".box_frame").hover(function() {
         hover_fadeInOut($(this));
     });
+    $(".overlay").click(function() {
+        $(".overlay").fadeOut(400);
+        $("#login").fadeOut(400);
+        $("#register").fadeOut(400);
+    });
 });
 
 function hover_fadeInOut(obj_frame) {
@@ -33,4 +38,14 @@ function fadeInOut(obj_frame, text) {
     });
     obj_frame.parent(".box_frame").fadeIn(1000);
 //    obj_frame.parent(".box_frame").fadeIn(1000);
+}
+
+function showLogin() {
+    $(".overlay").fadeIn(800);
+    $("#login").fadeIn(800);
+}
+
+function showRegister() {
+    $(".overlay").fadeIn(800);
+    $("#register").fadeIn(800);
 }

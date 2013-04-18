@@ -11,7 +11,7 @@ Class Register Extends CI_Controller{
 		$data['title'] = ucfirst('Register _____'); // Capitalize the first letter
 		
 		$this->load->view('templates/header', $data);
-		$this->load->view('register/'.$page, $data);
+		$this->load->view('register/register'.$page, $data);
 		$this->load->view('templates/footer', $data);
 	}
 }

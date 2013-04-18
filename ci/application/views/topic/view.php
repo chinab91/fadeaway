@@ -13,9 +13,71 @@
     echo "var entries_id = ".$js_entries_id.";\n";
 ?>
 </script>
+
+<div class ="overlay">
+</div>
+
+<div class="topUserBar" id="login">
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('login/verify') ?>
+    <label for="username">Username: </label>
+
+    <input type="text" size="20" name="username" value ="Username" 
+           onfocus="if(this.value==this.defaultValue)this.value='';" 
+           onblur="if(this.value=='')this.value=this.defaultValue;"
+           />
+
+    <label for="password">Password: </label>
+    <input type="password" size="20" name="password"
+           value ="Password" 
+           onfocus="if(this.value==this.defaultValue)this.value='';" 
+           onblur="if(this.value=='')this.value=this.defaultValue;"
+           />
+    
+    <input type="submit" name="submit" value="Login"/>
+    </form>
+</div>
+
+<div class="topUserBar" id="register">
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('login/verify') ?>
+    <label for="username">Username: </label>
+
+    <input type="text" size="20" name="username" value ="Username" 
+           onfocus="if(this.value==this.defaultValue)this.value='';" 
+           onblur="if(this.value=='')this.value=this.defaultValue;"
+           />
+
+    <label for="email">Email: </label>
+
+    <input type="text" size="20" name="email" value ="Email" 
+           onfocus="if(this.value==this.defaultValue)this.value='';" 
+           onblur="if(this.value=='')this.value=this.defaultValue;"
+           />
+
+    <label for="password">Password: </label>
+    <input type="password" size="20" name="password"
+           value ="Password" 
+           onfocus="if(this.value==this.defaultValue)this.value='';" 
+           onblur="if(this.value=='')this.value=this.defaultValue;"
+           />
+
+    <input type="submit" name="submit" value="Register"/>
+    </form>
+</div>
+
 <div class = "wrapper">
 <div class = "topic"><h1><?php echo $topic['topic'];?> _______</h1></div>
-<div class = "user"><h1><?php if($username){echo 'welcome '.$username.anchor("login/logout",'Click to Logout');}?> </h1></div>
+
+
+
+
+<div class = "userBox <?php if($username){echo 'remove';}?>"><a onclick="showRegister()">Register</a> / <a onclick="showLogin()">Login</a></div>
+
+<div class = "userBox <?php if(!$username){echo 'remove';}?>">
+    <?php if($username){echo 'welcome '.$username."<br>".anchor("login/logout",'Click to Logout');}?> 
+</div>
+
 <div class = "box_frame" id = "pos0"><div class ="box_content" id = "boxContent0">
 <b>Fill this</b>
 </div></div>
