@@ -1,7 +1,2 @@
-<?php
-echo '<p>Fills Good!'
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+<?php echo '<p>Fills Good!';?>
+<p><?php echo anchor('home','< < Go back to home') ?>

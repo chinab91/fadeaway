@@ -45,7 +45,7 @@ class Topic extends CI_Controller {
 
         $data['title'] = 'Create new fills';
 
-        $this->form_validation->set_rules('text', 'text', 'required');
+        $this->form_validation->set_rules('text', 'text', 'trim|required|min_length[1]|max_length[50]|xss_clean');
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('templates/header', $data);

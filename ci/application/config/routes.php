@@ -38,7 +38,7 @@
 |
 */
 $route['home']='topic/home';
-$route['register']='register/view';
+$route['register']='register/index';
 $route['request']='request/get';
 
 //$route['default_controller'] = 'maintenance/view';

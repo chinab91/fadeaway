@@ -10,7 +10,11 @@ class Entry_model extends CI_Model{
             return $query->result_array();
         }
         $entries_number = 11;
+        $this->db->order_by('timestamp','desc');
         $query = $this->db->get_where('entries',array('topic_id'=>$topic_id),$entries_number);
+        
+//        $entries_number = 11;
+//        $query = $this->db->query("SELECT * FROM users ORDER BY entry_id DESC LIMIT 11");
         return $query->result_array();
     }
     
@@ -28,9 +32,15 @@ class Entry_model extends CI_Model{
     }
     
     public function set_entry(){
+        if($this->session->userdata('user_id')){
+            $user_id = $this->session->userdata('user_id');
+        }else{
+            $user_id = 0;
+        }
+            
         $data = array(
             'content'=>  $this->input->post('text'),
-            'user_id' => 0,
+            'user_id' => $user_id,
             'topic_id' =>0
         );
         return $this->db->insert('entries',$data);

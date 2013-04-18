@@ -34,7 +34,7 @@ class Login extends CI_Controller {
         
         if($result){
             $session_array = array(
-                'id'=>$result['0']['user_id'],
+                'user_id'=>$result['0']['user_id'],
                 'username' => $result['0']['user_name']
                 );
             $this->session->set_userdata('logged_in',$session_array);
