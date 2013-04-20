@@ -2,7 +2,7 @@
 <script type="text/javascript" src="/script/requestJSON.js"></script>
 <script type="text/javascript">
 <?php 
-    $js_topic_id = json_encode($topic['topic_id']);
+    $js_topic_id = json_encode($topic_id);
     echo "var topic_id = ".$js_topic_id.";\n";
     $js_entries_id = array();
     $counter = 0;

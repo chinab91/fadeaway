@@ -96,6 +96,7 @@ p {
     height: inherit;*/
     display: block;
 /*    overflow: hidden;*/
+    font-weight: bold;
     word-wrap: break-word;
     overflow: hidden;
     font-size:25px;

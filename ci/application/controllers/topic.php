@@ -16,7 +16,7 @@ class Topic extends CI_Controller {
             $data['username'] = $session_data['username'];
         }
 
-        $topic_array = $this->Topic_model->get_topics(0);
+        $topic_array = $this->Topic_model->get_topics(1);
         $data['entries'] = $this->Entry_model->get_entries($topic_array['topic_id']);
         $data['title'] = $topic_array['topic'];
         $data['topic'] = $topic_array['topic'];

@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
     
     $('textarea#inputContent').change(function() {
-        $(".box_content").css('font-weight','bold').text($(this).val()).css('marginTop','-'+$(".box_content").height()/2 + 'px');
+        $(".box_content").text($(this).val()).css('marginTop','-'+$(".box_content").height()/2 + 'px');
     });
     
     $(".box_frame").fadeOut(300, function() {
