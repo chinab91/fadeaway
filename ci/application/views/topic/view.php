@@ -21,19 +21,9 @@
 <div class="topUserBar" id="login">
     <?php echo validation_errors(); ?>
     <?php echo form_open('login/verify') ?>
-    <label for="username">Username: </label>
-
-    <input type="text" size="20" name="username" value ="Username" 
-           onfocus="if(this.value==this.defaultValue)this.value='';" 
-           onblur="if(this.value=='')this.value=this.defaultValue;"
-           />
-
-    <label for="password">Password: </label>
-    <input type="password" size="20" name="password"
-           value ="Password" 
-           onfocus="if(this.value==this.defaultValue)this.value='';" 
-           onblur="if(this.value=='')this.value=this.defaultValue;"
-           />
+    
+    <input type="text" size="20" name="username" placeholder="Username"/>
+    <input type="password" size="20" name="password" placeholder="Password"/>
     
     <input type="submit" name="submit" value="Login"/>
     </form>
@@ -42,30 +32,10 @@
 <div class="topUserBar" id="register">
     <?php echo validation_errors(); ?>
     <?php echo form_open('register/verify') ?>
-    <label for="username">Username: </label>
-
-    <input type="text" size="20" name="username" value ="Username" 
-           onfocus="if(this.value==this.defaultValue)this.value='';" 
-           onblur="if(this.value=='')this.value=this.defaultValue;"
-           />
-
-    <label for="email">Email: </label>
-
-    <input type="text" size="20" name="email" value ="Email" 
-           onfocus="if(this.value==this.defaultValue)this.value='';" 
-           onblur="if(this.value=='')this.value=this.defaultValue;"
-           />
-
-    <label for="password">Password: </label>
-    <input type="password" size="20" name="password"
-           value ="Password" 
-           onfocus="if(this.value==this.defaultValue)this.value='';" 
-           onblur="if(this.value=='')this.value=this.defaultValue;"
-           />
-    
-    <label for="comfirm_password">Confirm Password: </label>
-    <input type="password" size="20" name="comfirm_password"
-           />
+    <input type="text" size="20" name="username" placeholder="Username"/>
+    <input type="text" size="20" name="email"  placeholder="Email"/>
+    <input type="password" size="20" name="password" placeholder="Password"/>
+    <input type="password" size="20" name="comfirm_password"  placeholder="Comfirm Password"/>
     <input type="submit" name="submit" value="Register"/>
     </form>
 </div>

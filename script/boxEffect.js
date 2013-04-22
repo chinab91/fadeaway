@@ -45,8 +45,7 @@ function fadeInOut(obj_frame, text) {
         obj_frame.css('marginTop', '-' + obj_frame.parent(".box_frame").children(".box_content").height() / 2 + 'px');
         obj_frame.parent(".box_frame").css('display', 'none').css('opacity',1);
         //fade in
-        obj_frame.parent(".box_frame").fadeIn(1000, function() {
-        });
+        obj_frame.parent(".box_frame").fadeIn(1000);
         
     });
 
