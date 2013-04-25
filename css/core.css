@@ -62,6 +62,49 @@ p {
     z-index: 3;
 }
 
+.home_frame {
+    width: 420px;
+    height: 80%;
+    float: left;
+    border:5px solid transparent;
+    margin: 5px 5px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.home_frame:hover {
+    border-color: #2E78E6;
+}
+
+.home_frame#pr {
+    background: red;
+}
+
+.home_frame#umno {
+    background: blue;
+}
+
+.home_content {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    display: block;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size:25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.home_wrapper {
+    height: 570px;
+    width: 880px;
+    overflow: hidden;
+}
+
+
 .wrapper {
     min-height: 570px;
     width: 880px;
@@ -92,16 +135,15 @@ p {
     position: absolute;
     top: 50%;
     width: 100%;
-/*    width: inherit;
-    height: inherit;*/
+    /*    width: inherit;
+        height: inherit;*/
     display: block;
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
     font-weight: bold;
     word-wrap: break-word;
     overflow: hidden;
     font-size:25px;
     text-align: center;
-    vertical-align: middle;
 }
 
 .box_frame#pos0,

@@ -37,13 +37,13 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['home']='topic/home';
+$route['home']='topic/view/1';
 $route['register']='register/index';
 $route['request']='request/get';
 
 //$route['default_controller'] = 'maintenance/view';
 $route['fills'] = 'topic/fills';
-$route['default_controller'] = 'topic/home';
+$route['default_controller'] = 'pages/view';
 
 //$route['default_controller'] = 'pages/view';
 //$route['(:any)'] = 'pages/view/$1';

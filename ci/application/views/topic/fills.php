@@ -8,7 +8,7 @@
     <?php echo validation_errors(); ?>
     <?php echo form_open('topic/fill_add') ?>
     <label for="text">Content</label><br />
-    <textarea name="text" id="inputContent">Fill this</textarea><br />
+    <textarea name="text" id="inputContent" rows="2" cols="35" maxlength="70">Fill this</textarea><br />
         <input type="hidden" name="bground_R" id="bg_R" value ="0"/>
         <input type="hidden" name="bground_G" id="bg_G" value ="0"/>
         <input type="hidden" name="bground_B" id="bg_B" value ="0"/>

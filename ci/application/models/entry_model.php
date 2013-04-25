@@ -39,9 +39,12 @@ class Entry_model extends CI_Model {
         } else {
             $user_id = 0;
         }
-
+        
+        $content = $this->input->post('text');
+        $content = $this->filter_content($content);
+        
         $data = array(
-            'content' => $this->input->post('text'),
+            'content' => $content,
             'user_id' => $user_id,
             'bground_R' => $this->input->post('bground_R'),
             'bground_G' => $this->input->post('bground_G'),
@@ -53,5 +56,17 @@ class Entry_model extends CI_Model {
         );
         return $this->db->insert('entries', $data);
     }
-
+    
+    public function filter_content($content){
+        $this->load->helper('text');
+        $censored = array(
+            'ass',
+            'fuck',
+            'bitch',
+            'nigger'
+        );
+        $replacement = "***";
+        $content = word_censor($content, $censored, $replacement);
+        return $content;
+    }
 }

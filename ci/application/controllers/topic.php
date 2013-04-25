@@ -9,14 +9,15 @@ class Topic extends CI_Controller {
         $this->load->library('form_validation');
     }
 
-    public function home() {
+    public function view($topic_id) {
         $data['username'] = NULL;
         if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
         }
-
-        $topic_array = $this->Topic_model->get_topics(1);
+        
+        //testing with 1
+        $topic_array = $this->Topic_model->get_topics($topic_id);
         $data['entries'] = $this->Entry_model->get_entries($topic_array['topic_id']);
         $data['title'] = $topic_array['topic'];
         $data['topic'] = $topic_array['topic'];
