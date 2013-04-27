@@ -29,6 +29,7 @@
 <div class = "wrapper">
     <div class = "home_wrapper">
     <h1>I think ......</h1>
+    
     <div class = "userBox <?php if($username){echo 'remove';}?>"><a onclick="showRegister()">Register</a> / <a onclick="showLogin()">Login</a></div>
 
     <div class = "userBox <?php if(!$username){echo 'remove';}?>">

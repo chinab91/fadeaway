@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /ci/ # This is an infinite virtual URL space
+Disallow: /css/ # these will soon disappear
+Disallow: /script/

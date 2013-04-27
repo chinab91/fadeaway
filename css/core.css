@@ -8,11 +8,33 @@ body {
 }
 a {
     cursor: pointer;
+    color: inherit;
 }
 
 p {
     font-family: "Times New Roman";
     font-size: 20px;
+}
+
+
+
+.menu a,
+.fillsgood a{
+    text-decoration: none;
+}
+
+.menu a:hover,
+.fillsgood a:hover{
+    text-decoration: underline;
+}
+
+.menu{
+    position: absolute;
+    font-weight: bold;
+    margin-right: 5px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
 }
 
 .topic {
@@ -39,11 +61,16 @@ p {
     position: fixed;
     padding: 2px 1em;
     color: black;
+    font-weight: bold;
     background-color: #eee;
     margin-right: 85px;
     right: 0px;
     top: 0px;
     z-index: 1;
+}
+
+.userBox a:hover{
+    text-decoration: underline;
 }
 
 .topUserBar {
