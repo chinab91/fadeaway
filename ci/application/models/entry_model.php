@@ -1,7 +1,6 @@
 <?php
 
 class Entry_model extends CI_Model {
-
     public function __construct() {
         $this->load->database();
     }
@@ -11,9 +10,10 @@ class Entry_model extends CI_Model {
             $query = $this->db->get('entries', 11, 0);
             return $query->result_array();
         }
+        $nohide = 0;
         $entries_number = 11;
         $this->db->order_by('timestamp', 'desc');
-        $query = $this->db->get_where('entries', array('topic_id' => $topic_id), $entries_number);
+        $query = $this->db->get_where('entries', array('topic_id' => $topic_id,'hide' => $nohide), $entries_number);
 
 //        $entries_number = 11;
 //        $query = $this->db->query("SELECT * FROM users ORDER BY entry_id DESC LIMIT 11");
@@ -25,9 +25,11 @@ class Entry_model extends CI_Model {
             $query = $this->db->get('entries', 11, 0);
             return $query->result_array();
         }
+        
         $entries_number = 11;
+        $nohide = 0;
         $this->db->where_not_in('entry_id', $entries_id);
-        $query = $this->db->get_where('entries', array('topic_id' => $topic_id), $entries_number);
+        $query = $this->db->get_where('entries', array('topic_id' => $topic_id,'hide' => $nohide), $entries_number);
         //$query = $this->db->select('*')->from('entries')->where('topic_id',$topic_id)->where_not_in('entry_id',$entries_id);
         //$query = $this->db->where_not_in('entry_id',$entries_id);
         return $query->result_array();

@@ -357,6 +357,16 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-
+/*
+|--------------------------------------------------------------------------
+| reCAPTCHA
+|--------------------------------------------------------------------------
+|
+| This is configuration for recaptcha
+|
+*/
+$config['recaptcha_public_key'] = '6Lf_bOASAAAAADYi3mMazfrQdsU1VFyCpn-Edt-z';
+$config['recaptcha_private_key'] ='6Lf_bOASAAAAAAFTXLbwPVZ6wiHUJSpcqnAMlyKk';
+        
 /* End of file config.php */
 /* Location: ./application/config/config.php */

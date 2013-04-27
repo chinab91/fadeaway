@@ -2,18 +2,6 @@ $(document).ready(function() {
     
     $(".box_content").css('marginTop','-'+$(".box_content").height()/2 + 'px');
     
-    $('textarea#inputContent').focus(function() {
-        if ($(this).val() == "Fill this") {
-            $(this).val('');
-        }
-    });
-
-    $('textarea#inputContent').focusout(function() {
-        if ($(this).val() == "") {
-            $(this).val('Fill this');
-        }
-    });
-    
     $('textarea#inputContent').change(function() {
         $(".box_content").text($(this).val()).css('marginTop','-'+$(".box_content").height()/2 + 'px');
     });
