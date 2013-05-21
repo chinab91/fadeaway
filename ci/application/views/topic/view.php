@@ -50,16 +50,19 @@
 </div>
 
 <div class = "wrapper">
+
+<div class = "userBox <?php if($username){echo 'remove';}?>"><a onclick="showRegister()">Register</a> / <a onclick="showLogin()">Login</a></div>
+
+<div class = "userBox <?php if(!$username){echo 'remove';}?>">
+    <?php if($username){echo 'welcome '.$username." ".anchor("login/logout",'Click to Logout');}?> 
+</div>
+
 <div class = "topic"><h1><?php echo $topic;?> _______</h1></div>
 
 
 
 
-<div class = "userBox <?php if($username){echo 'remove';}?>"><a onclick="showRegister()">Register</a> / <a onclick="showLogin()">Login</a></div>
 
-<div class = "userBox <?php if(!$username){echo 'remove';}?>">
-    <?php if($username){echo 'welcome '.$username."<br>".anchor("login/logout",'Click to Logout');}?> 
-</div>
 
 <div class = "box_frame tooltip" id = "pos0" data-tip="click here" onclick="location.href='<?php echo site_url("topic/fills/$topic_id");?>'" style =" cursor: pointer;"><div class ="box_content" id = "boxContent0">
 <a>Fill this</a>

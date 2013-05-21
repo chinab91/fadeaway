@@ -1,10 +1,17 @@
+
+/*colour scheme
+base:0F0307
+BF3434
+260101
+8C6E35
+8C3232*/
 body {
     color: white;
     margin: 0;
     padding: 0;
     position: relative;
     font-family: "Arial";
-    background-color: #0F0107;
+    background-color: #0F0307;
 }
 a {
     cursor: pointer;
@@ -84,14 +91,15 @@ p {
     z-index: 2;
 }
 .userBox {
-    position: fixed;
+    position: relative;
     padding: 2px 1em;
     color: black;
     font-weight: bold;
-    background-color: #eee;
+    background-color: #8C3232;
     margin-right: 85px;
-    right: 0px;
+    left: 0px;
     top: 0px;
+    width: 100%;
     z-index: 1;
 }
 
@@ -107,11 +115,12 @@ p {
     padding: 0.5em 1em;
     right: 0px;
     top: 0px;
-    color: #333;
+    color: #8C3232;
+    background: #8C3232;
     border-style:solid;
     border-width:1px;
     border-color:black;
-    background: #eee;
+    
     z-index: 3;
 }
 
