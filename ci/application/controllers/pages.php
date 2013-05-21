@@ -13,7 +13,7 @@ class Pages extends CI_Controller {
             show_404();
         }
 
-        $data['title'] = ucfirst('Fill this _____'); // Capitalize the first letter
+        $data['title'] = ucfirst('Fills Good'); // Capitalize the first letter
         //load pages
         $data['username'] = FALSE;
         if ($this->session->userdata('logged_in')) {

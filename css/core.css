@@ -16,7 +16,22 @@ p {
     font-size: 20px;
 }
 
+.tooltip::before{
+    position: absolute;
+    content: attr(data-tip);
+    padding: 0px 5px;
+    top: -30px;
+    left: -5px;
+    color: #000;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
 
+.tooltip:hover::before{
+    opacity: 1;
+    top: -30px;
+}
 
 .menu a,
 .fillsgood a{
